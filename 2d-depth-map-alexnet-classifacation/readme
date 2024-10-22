@@ -1,0 +1,8 @@
+预处理，转换成depth map，保存数据
+python data_loader.py --function wash_and_save
+
+python data_loader.py --function print_pinned_labels
+
+python train.py train --dataset_path washed_labeled_data.pt --epochs 8 --batch_size 32
+python train.py evaluate --dataset_path washed_labeled_data.pt --model_path simplified_alexnet_model.pth
+python train.py predict --dataset_path washed_labeled_data.pt --model_path simplified_alexnet_model.pth
