@@ -1,8 +1,8 @@
   基于st的multizone的tof的ai开发
 
-  先尝试了纯分类的大概能用，dbscan效果最好，如果家具一定是立方体就可以分别，精度不高
+  先尝试了纯分类的大概能用，dbscan效果最好，如果家具一定是立方体就可以分别，精度不高。
 
-  然后尝试了，纯2d卷积，效果一般，中心可以分别但是棱角会扩散开{
+  然后尝试了，基于depthmap的纯2d卷积，效果一般，中心可以分别，但是棱角会扩散开，具体可以看{
   在“2d...”文件夹中有单独的readme
   预处理，转换成depth map，保存数据
 python data_loader.py --function wash_and_save
